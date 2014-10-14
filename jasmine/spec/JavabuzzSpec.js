@@ -46,5 +46,15 @@ describe('Javabuzz', function() {
 		it('just gives the number back', function(){
 			expect(javabuzz.say(7)).toEqual(7)
 		})
+
+		it('works upto 100 and beyond', function(){
+			expect(javabuzz.say(9)).toEqual("Java")
+		})
+
+		it('works upto 100 and beyond', function(){
+			expect(javabuzz.say(30)).toEqual("JavaBuzz")
+		})
+
+
 	});
 });
