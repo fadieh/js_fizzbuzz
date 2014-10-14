@@ -54,7 +54,13 @@ describe('Javabuzz', function() {
 		it('works upto 100 and beyond', function(){
 			expect(javabuzz.say(30)).toEqual("JavaBuzz")
 		})
-
-
 	});
+
+	describe('Now the game...', function(){
+		it('calls isDivisibleBy 100 times', function(){
+			spyOn(javabuzz, 'isDivisibleBy');
+			javabuzz.go();
+			expect(javabuzz.isDivisibleBy).toHaveBeenCalled();
+		})
+	})
 });
